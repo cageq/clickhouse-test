@@ -1,0 +1,1 @@
+create table logs  (`Day` Date,  `Time` UInt64 ,`Level` UInt8 , `File` String,   `Log` String   ) ENGINE = MergeTree() ORDER BY Time  PARTITION BY toYYYYMM(Day) SETTINGS index_granularity = 8192        
